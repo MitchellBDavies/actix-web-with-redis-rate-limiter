@@ -1,10 +1,10 @@
 services:
+  redis:
+    image: "redis:alpine"
+
   actix_server:
     build: 
       context: ./actix_server
       target: actix_server
     ports:
       - "8080:8080"
-
-  redis:
-    image: "redis:alpine"
